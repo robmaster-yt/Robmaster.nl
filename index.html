@@ -71,12 +71,19 @@ a {
 <p>Collect • Shop • Enjoy!</p>
 
 <div class="card">
-<h2>🪙 Master Coins</h2>
-<p>Jouw avontuur begint hier!</p>
-<button onclick="alert('Master Coins komen eraan!')">
-Master Coins
-</button>
+  <h2>🪙 Master Coins</h2>
+
+  <h1 id="coins">0 MC</h1>
+
+  <p id="dailyMessage">
+    Claim jouw dagelijkse beloning!
+  </p>
+
+  <button id="claimButton" onclick="claimCoins()">
+    🎁 CLAIM 10 COINS
+  </button>
 </div>
+
 
 <div class="card">
 <h2>🛍️ Master Shop</h2>
@@ -103,6 +110,46 @@ Open Shop
   </p>
 </div>
 
+
+<script>
+let coins = Number(localStorage.getItem("masterCoins")) || 0;
+
+function updateCoins() {
+  document.getElementById("coins").innerText = coins + " MC";
+
+  let lastClaim = localStorage.getItem("lastClaim");
+  let today = new Date().toLocaleDateString("sv-SE");
+
+  if (lastClaim === today) {
+    document.getElementById("dailyMessage").innerText =
+      "Je hebt vandaag al geclaimd! 💙";
+
+    document.getElementById("claimButton").disabled = true;
+    document.getElementById("claimButton").innerText =
+      "✅ AL GECLAIMD";
+  }
+}
+
+function claimCoins() {
+  let lastClaim = localStorage.getItem("lastClaim");
+  let today = new Date().toLocaleDateString("sv-SE");
+
+  if (lastClaim !== today) {
+    coins += 10;
+
+    localStorage.setItem("masterCoins", coins);
+    localStorage.setItem("lastClaim", today);
+
+    updateCoins();
+
+    document.getElementById("dailyMessage").innerText =
+      "YES! Je hebt 10 Master Coins verdiend! 🎉";
+  }
+}
+
+updateCoins();
+</script>
+</body>
 
 </body>
 </html>
