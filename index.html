@@ -85,13 +85,44 @@ a {
 </div>
 
 
-<div class="card">
-<h2>🛍️ Master Shop</h2>
-<p>Koop de vetste stickers!</p>
-<button onclick="alert('De shop komt eraan!')">
-Open Shop
-</button>
+
+<div class="card" style="max-width:700px">
+  <h2>🛍️ MASTER SHOP</h2>
+  <p>Verzamel jouw favoriete stickers!</p>
+
+  <div class="card">
+    <img src="minecraft-logo-sticker.png" width="130">
+    <h2>⛏️ Minecraft Logo</h2>
+    <p>50 Master Coins</p>
+    <button onclick="buySticker('minecraft')">KOOP</button>
+    <button id="download-minecraft" hidden onclick="downloadSticker('minecraft')">DOWNLOAD</button>
+  </div>
+
+  <div class="card">
+    <img src="creeper-hoofd-sticker.png" width="130">
+    <h2>💚 Creeper</h2>
+    <p>100 Master Coins</p>
+    <button onclick="buySticker('creeper')">KOOP</button>
+    <button id="download-creeper" hidden onclick="downloadSticker('creeper')">DOWNLOAD</button>
+  </div>
+
+  <div class="card">
+    <img src="skeleton-hoofd-sticker.png" width="130">
+    <h2>💀 Skeleton</h2>
+    <p>40 Master Coins</p>
+    <button onclick="buySticker('skeleton')">KOOP</button>
+    <button id="download-skeleton" hidden onclick="downloadSticker('skeleton')">DOWNLOAD</button>
+  </div>
+
+  <div class="card">
+    <img src="blaze-hoofd-sticker.png" width="130">
+    <h2>🔥 Blaze</h2>
+    <p>60 Master Coins</p>
+    <button onclick="buySticker('blaze')">KOOP</button>
+    <button id="download-blaze" hidden onclick="downloadSticker('blaze')">DOWNLOAD</button>
+  </div>
 </div>
+
 
 
 
