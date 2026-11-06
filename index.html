@@ -111,44 +111,34 @@ Open Shop
 </div>
 
 
+
 <script>
-let coins = Number(localStorage.getItem("masterCoins")) || 0;
-
-function updateCoins() {
-  document.getElementById("coins").innerText = coins + " MC";
-
+function claimCoins() {
+  let coins = Number(localStorage.getItem("masterCoins")) || 0;
   let lastClaim = localStorage.getItem("lastClaim");
   let today = new Date().toLocaleDateString("sv-SE");
 
   if (lastClaim === today) {
-    document.getElementById("dailyMessage").innerText =
-      "Je hebt vandaag al geclaimd! 💙";
-
-    document.getElementById("claimButton").disabled = true;
-    document.getElementById("claimButton").innerText =
-      "✅ AL GECLAIMD";
+    alert("Je hebt vandaag al geclaimd!");
+    return;
   }
+
+  coins += 10;
+
+  localStorage.setItem("masterCoins", coins);
+  localStorage.setItem("lastClaim", today);
+
+  document.getElementById("coins").innerText = coins + " MC";
+
+  document.getElementById("dailyMessage").innerText =
+    "YES! Je hebt 10 Master Coins verdiend! 🎉";
+
+  document.getElementById("claimButton").disabled = true;
+  document.getElementById("claimButton").innerText =
+    "✅ AL GECLAIMD";
 }
-
-function claimCoins() {
-  let lastClaim = localStorage.getItem("lastClaim");
-  let today = new Date().toLocaleDateString("sv-SE");
-
-  if (lastClaim !== today) {
-    coins += 10;
-
-    localStorage.setItem("masterCoins", coins);
-    localStorage.setItem("lastClaim", today);
-
-    updateCoins();
-
-    document.getElementById("dailyMessage").innerText =
-      "YES! Je hebt 10 Master Coins verdiend! 🎉";
-  }
-}
-
-updateCoins();
 </script>
+
 </body>
 
 </body>
