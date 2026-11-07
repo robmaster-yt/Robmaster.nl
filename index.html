@@ -5,58 +5,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ROBMASTER.NL</title>
+<title>Robmaster.nl</title>
 
 <style>
 
-/* NAVIGATIE MENU */
+/* ALLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #080817;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #080817;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* MENU */
 
 .navbar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background: #080817;
     padding: 15px;
+    background: #080817;
     border-bottom: 2px solid #00eaff;
+    box-shadow: 0 0 15px #00eaff33;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
     font-weight: bold;
+    font-size: 17px;
     padding: 12px 25px;
     border-radius: 10px;
     transition: 0.2s;
 }
 
-.navbar a:hover {
-    background: #00eaff;
-    color: #080817;
-    box-shadow: 0 0 15px #00eaff;
-}
-
+.navbar a:hover,
 .navbar a.active {
     background: #00eaff;
     color: #080817;
-}
-* {
-    box-sizing: border-box;
-}
-
-body
-<nav class="navbar">
-
-    <a href="index.html" class="active">Home</a>
-
-    <a href="info.html">Info</a>
-
-</nav>
- {
-    margin: 0;
-    background: #080817;
-    color: white;
-    font-family: Arial, sans-serif;
+    box-shadow: 0 0 15px #00eaff;
 }
 
 /* HEADER */
@@ -64,7 +62,7 @@ body
 header {
     background: #111129;
     text-align: center;
-    padding: 20px 15px 30px;
+    padding: 25px 15px 35px;
 }
 
 .avatar {
@@ -83,11 +81,12 @@ header {
     text-shadow: 0 0 15px #00eaff;
 }
 
-/* WELKOM */
+/* MAIN */
 
 main {
+    background: #080817;
     text-align: center;
-    padding: 30px 15px;
+    padding: 35px 15px;
 }
 
 h1 {
@@ -99,7 +98,7 @@ h1 {
 .welcome {
     color: #ccccdd;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 35px;
 }
 
@@ -108,7 +107,7 @@ h1 {
 .socials {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
     padding: 16px;
     flex-wrap: wrap;
 }
@@ -118,16 +117,17 @@ h1 {
     align-items: center;
     gap: 15px;
     width: 263px;
-    padding: 20px 24px;
+    padding: 22px 24px;
     border-radius: 15px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: 0.25s;
+    box-shadow: 0 5px 20px #0005;
 }
 
 .social-button:hover {
-    transform: scale(1.04);
+    transform: translateY(-5px) scale(1.03);
     filter: brightness(1.15);
 }
 
@@ -148,17 +148,17 @@ h1 {
 .social-button small {
     font-size: 13px;
     font-weight: normal;
-    margin-top: 3px;
+    margin-top: 4px;
 }
 
-/* BUTTON KLEUREN */
+/* KLEUREN */
 
 .twitch {
     background: linear-gradient(135deg, #a855ff, #6418d8);
 }
 
 .discord {
-    background: #5865f2;
+    background: linear-gradient(135deg, #5865f2, #303bb5);
 }
 
 .youtube {
@@ -168,15 +168,25 @@ h1 {
 /* FOOTER */
 
 footer {
-    margin-top: 60px;
-    padding: 20px;
-    color: #777799;
+    background: #080817;
     text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+    color: #777799;
 }
 
 /* MOBIEL */
 
 @media (max-width: 600px) {
+
+    .navbar {
+        gap: 8px;
+    }
+
+    .navbar a {
+        padding: 12px 20px;
+    }
+
     h1 {
         font-size: 30px;
     }
@@ -189,11 +199,22 @@ footer {
         width: 100%;
         max-width: 350px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- MENU -->
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="info.html">Info</a>
+</nav>
+
+<!-- HEADER -->
 
 <header>
 
@@ -207,6 +228,8 @@ footer {
 
 </header>
 
+<!-- HOME -->
+
 <main>
 
     <h1>Welkom bij Robmaster!</h1>
@@ -215,6 +238,8 @@ footer {
         Yo! Welkom op mijn officiële website!<br>
         Check mijn socials en join de community!
     </p>
+
+    <!-- SOCIALS -->
 
     <div class="socials">
 
@@ -233,6 +258,7 @@ footer {
                 Twitch
                 <small>robmastergaming</small>
             </span>
+
         </a>
 
         <!-- DISCORD -->
@@ -250,6 +276,7 @@ footer {
                 Discord
                 <small>Join mijn server!</small>
             </span>
+
         </a>
 
         <!-- YOUTUBE -->
@@ -267,11 +294,14 @@ footer {
                 YouTube
                 <small>@Robmaster_YT</small>
             </span>
+
         </a>
 
     </div>
 
 </main>
+
+<!-- FOOTER -->
 
 <footer>
     © 2026 ROBMASTER.NL
@@ -279,6 +309,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
