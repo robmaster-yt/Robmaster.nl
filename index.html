@@ -68,59 +68,7 @@ a {
 
 
 <h1>Welkom bij Robmaster!</h1>
-<p>Collect • Shop • Enjoy!</p>
 
-<div class="card">
-  <h2>🪙 Master Coins</h2>
-
-  <h1 id="coins">0 MC</h1>
-
-  <p id="dailyMessage">
-    Claim jouw dagelijkse beloning!
-  </p>
-
-  <button id="claimButton" onclick="claimCoins()">
-    🎁 CLAIM 10 COINS
-  </button>
-</div>
-
-
-
-<div class="card" style="max-width:700px">
-  <h2>🛍️ MASTER SHOP</h2>
-  <p>Verzamel jouw favoriete stickers!</p>
-
-  <div class="card">
-    <img src="minecraft-logo-sticker.png" width="130">
-    <h2>⛏️ Minecraft Logo</h2>
-    <p>50 Master Coins</p>
-    <button onclick="buySticker('minecraft')">KOOP</button>
-    <button id="download-minecraft" hidden onclick="downloadSticker('minecraft')">DOWNLOAD</button>
-  </div>
-
-  <div class="card">
-    <img src="creeper-hoofd-sticker.png" width="130">
-    <h2>💚 Creeper</h2>
-    <p>100 Master Coins</p>
-    <button onclick="buySticker('creeper')">KOOP</button>
-    <button id="download-creeper" hidden onclick="downloadSticker('creeper')">DOWNLOAD</button>
-  </div>
-
-  <div class="card">
-    <img src="skeleton-hoofd-sticker.png" width="130">
-    <h2>💀 Skeleton</h2>
-    <p>40 Master Coins</p>
-    <button onclick="buySticker('skeleton')">KOOP</button>
-    <button id="download-skeleton" hidden onclick="downloadSticker('skeleton')">DOWNLOAD</button>
-  </div>
-
-  <div class="card">
-    <img src="blaze-hoofd-sticker.png" width="130">
-    <h2>🔥 Blaze</h2>
-    <p>60 Master Coins</p>
-    <button onclick="buySticker('blaze')">KOOP</button>
-    <button id="download-blaze" hidden onclick="downloadSticker('blaze')">DOWNLOAD</button>
-  </div>
 </div>
 
 
@@ -141,34 +89,6 @@ a {
   </p>
 </div>
 
-
-
-<script>
-function claimCoins() {
-  let coins = Number(localStorage.getItem("masterCoins")) || 0;
-  let lastClaim = localStorage.getItem("lastClaim");
-  let today = new Date().toLocaleDateString("sv-SE");
-
-  if (lastClaim === today) {
-    alert("Je hebt vandaag al geclaimd!");
-    return;
-  }
-
-  coins += 10;
-
-  localStorage.setItem("masterCoins", coins);
-  localStorage.setItem("lastClaim", today);
-
-  document.getElementById("coins").innerText = coins + " MC";
-
-  document.getElementById("dailyMessage").innerText =
-    "YES! Je hebt 10 Master Coins verdiend! 🎉";
-
-  document.getElementById("claimButton").disabled = true;
-  document.getElementById("claimButton").innerText =
-    "✅ AL GECLAIMD";
-}
-</script>
 
 </body>
 
