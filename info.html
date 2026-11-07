@@ -2,77 +2,108 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Info - Robmaster.nl</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Robmaster</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-html, body {
-    margin: 0;
-    min-height: 100%;
-    background: #080817;
-    color: white;
-    font-family: Arial, sans-serif;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #080817;
+            color: #00eaff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-body {
-    min-height: 100vh;
-    text-align: center;
-}
+        header {
+            background: #111129;
+            padding: 20px;
+            box-shadow: 0 0 20px #00eaff;
+        }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 15px;
-    border-bottom: 2px solid #00eaff;
-}
+        nav a {
+            color: #00eaff;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 12px 25px;
-    border-radius: 10px;
-}
+        nav a:hover {
+            color: white;
+            text-shadow: 0 0 10px #00eaff;
+        }
 
-.navbar a:hover,
-.navbar a.active {
-    background: #00eaff;
-    color: #080817;
-}
+        main {
+            padding: 50px 20px;
+        }
 
-h1 {
-    color: #00eaff;
-    margin-top: 60px;
-    text-shadow: 0 0 15px #00eaff;
-}
+        h1 {
+            font-size: 40px;
+            text-shadow: 0 0 15px #00eaff;
+        }
 
-p {
-    color: #ccccdd;
-    font-size: 18px;
-    line-height: 1.7;
-}
-</style>
+        .info-box {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            border: 2px solid #00eaff;
+            border-radius: 20px;
+            box-shadow: 0 0 25px #00eaff;
+            background: #111129;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 20px;
+            color: #8888aa;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="info.html" class="active">Info</a>
-</nav>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="info.html">Info</a>
+        </nav>
+    </header>
 
-<h1>Info over Robmaster</h1>
+    <main>
+        <h1>💙 Over Robmaster 💙</h1>
 
-<p>Welkom op de officiële website van Robmaster!</p>
+        <div class="info-box">
+            Hey! Misschien heb je mij al weleens langs zien komen op social media!
+            Dat kan, ik ben Robin, ook wel Robmaster.
 
-<p>Hier vind je alles over mijn gaming, socials en community.</p>
+            <br><br>
+
+            Ik ben een content creator. Ik speel vooral spellen zoals Minecraft,
+            Rocket League, enz.
+
+            <br><br>
+
+            Natuurlijk kan je een kijkje nemen op mijn YouTube-kanaal en Discord.
+            De linkjes staan in het Home-menu!
+
+            <br><br>
+
+            Misschien zie ik je wel een keer langs komen in Minecraft! 😎
+        </div>
+    </main>
+
+    <footer>
+        © 2026 ROBMASTER.NL
+    </footer>
 
 </body>
 </html>
+
 
