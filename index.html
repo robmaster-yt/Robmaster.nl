@@ -1,5 +1,69 @@
 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ROBMASTER.NL ⚡</title>
+
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080817;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* HEADER */
+
+header {
+    background: #111129;
+    padding: 18px 15px 25px;
+}
+
+.avatar {
+    width: 500px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-title {
+    color: #00eaff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 12px;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+/* WELKOM */
+
+main {
+    padding: 25px 15px;
+}
+
+h1 {
+    color: #00eaff;
+    font-size: 42px;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+.welcome {
+    color: #ccccdd;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* SOCIAL BUTTONS */
+
 .socials {
     display: flex;
     justify-content: center;
@@ -17,7 +81,6 @@
     border-radius: 15px;
     text-decoration: none;
     color: white;
-    font-family: Arial, sans-serif;
     font-weight: bold;
     transition: 0.25s;
 }
@@ -27,70 +90,159 @@
     filter: brightness(1.15);
 }
 
-.social-button .icon {
-    font-size: 30px;
+.social-button svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+    flex-shrink: 0;
 }
 
-.social-button .info {
+.info {
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-size: 18px;
 }
 
 .social-button small {
     font-size: 13px;
     font-weight: normal;
+    margin-top: 3px;
 }
+
+/* KLEUREN */
 
 .twitch {
     background: linear-gradient(135deg, #a855ff, #6418d8);
-}
-
-.tiktok {
-    background: #101014;
-    border-right: 3px solid #ff2455;
-    border-left: 3px solid #00f2ea;
 }
 
 .youtube {
     background: linear-gradient(135deg, #ff263b, #c90024);
 }
 
+.discord {
+    background: #5865f2;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    color: #777799;
+}
+
+/* MOBIEL */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+
+    .social-button {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
 </style>
+</head>
 
-<div class="socials">
+<body>
 
-    <a class="social-button twitch"
-       href="https://www.twitch.tv/robmastergaming"
-       target="_blank">
-        <span class="icon">🟣</span>
-        <span class="info">
-            Twitch
-            <small>robmastergaming</small>
-        </span>
-    </a>
+<header>
 
-    <a class="social-button tiktok"
-       href="https://www.tiktok.com/@indodyl"
-       target="_blank">
-        <span class="icon">♪</span>
-        <span class="info">
-            TikTok
-            <small>@indodyl</small>
-        </span>
-    </a>
+    <img src="Logo RM.png"
+         class="avatar"
+         alt="Robmaster Logo">
 
-    <a class="social-button youtube"
-       href="https://www.youtube.com/@Robmaster_YT"
-       target="_blank">
-        <span class="icon">▶</span>
-        <span class="info">
-            YouTube
-            <small>@Robmaster_YT</small>
-        </span>
-    </a>
+    <div class="logo-title">
+        ⚡ ROBMASTER.NL ⚡
+    </div>
 
-</div>
+</header>
+
+<main>
+
+    <h1>Welkom bij Robmaster!</h1>
+
+    <p class="welcome">
+        Yo! Welkom op mijn officiële website!<br>
+        Check mijn socials en join de community!
+    </p>
+
+    <div class="socials">
+
+        <!-- TWITCH -->
+
+        <a class="social-button twitch"
+           href="https://www.twitch.tv/robmastergaming"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M4 2H22V16L17 21H12L9 24H5V21H2V6L4 2ZM6 5L5 8V18H9V21L12 18H17L20 15V5H6ZM10 8H12V14H10V8ZM15 8H17V14H15V8Z"/>
+            </svg>
+
+            <span class="info">
+                Twitch
+                <small>robmastergaming</small>
+            </span>
+
+        </a>
+
+        <!-- YOUTUBE -->
+
+        <a class="social-button youtube"
+           href="https://www.youtube.com/@Robmaster_YT"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M23.5 6.2A3 3 0 0 0 21.4 4C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8A3 3 0 0 0 2.6 20c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.5 16V8l7 4-7 4Z"/>
+            </svg>
+
+            <span class="info">
+                YouTube
+                <small>@Robmaster_YT</small>
+            </span>
+
+        </a>
+
+        <!-- DISCORD -->
+
+        <a class="social-button discord"
+           href="https://discord.gg/hnGFYj3c"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M19.5 5.2A18 18 0 0 0 15.2 4l-.5 1a15 15 0 0 0-5.4 0l-.5-1a18 18 0 0 0-4.3 1.2C1.8 9.2 1 13 1.4 17a18 18 0 0 0 5.5 2.8l1.2-2a12 12 0 0 1-1.8-.9l.4-.3a13 13 0 0 0 10.6 0l.4.3a12 12 0 0 1-1.8.9l1.2 2a18 18 0 0 0 5.5-2.8c.5-4.7-.8-8.5-3.1-11.8ZM8.5 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/>
+            </svg>
+
+            <span class="info">
+                Discord
+                <small>Join mijn server!</small>
+            </span>
+
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 ROBMASTER.NL ⚡
+</footer>
+
+</body>
+</html>
 
 
 
