@@ -1,160 +1,97 @@
 
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robmaster.nl ⚡</title>
-
 <style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background: #080817;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-header {
-    background: #111129;
-    padding: 35px 15px 25px;
-}
-
-.avatar {
-    width: 300px;
-    max-width: 90%;
-    border-radius: 0;
-}
-
-.logo-title {
-    color: #00eaff;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 12px;
-    text-shadow: 0 0 15px #00eaff;
-}
-
-main {
-    padding: 25px 15px;
-}
-
-h1 {
-    color: #00eaff;
-    text-shadow: 0 0 15px #00eaff;
-    font-size: 42px;
-}
-
-.welcome {
-    font-size: 18px;
-    color: #ccccdd;
-    margin-bottom: 35px;
-}
-
 .socials {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+    padding: 16px;
+    flex-wrap: wrap;
 }
 
-.social {
-    width: 260px;
-    padding: 22px;
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 263px;
+    padding: 20px 24px;
     border-radius: 15px;
     text-decoration: none;
     color: white;
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
-.social:hover {
-    transform: scale(1.05);
+.social-button:hover {
+    transform: scale(1.04);
+    filter: brightness(1.15);
 }
 
-.twitch {
-    background: linear-gradient(135deg, #9146ff, #5b16c9);
+.social-button .icon {
+    font-size: 30px;
 }
 
-.youtube {
-    background: linear-gradient(135deg, #ff2438, #c90024);
+.social-button .info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.discord {
-    background: linear-gradient(135deg, #5865f2, #303bb5);
-}
-
-.social span {
-    display: block;
-    font-size: 14px;
-    margin-top: 5px;
+.social-button small {
+    font-size: 13px;
     font-weight: normal;
 }
 
-footer {
-    margin-top: 60px;
-    padding: 20px;
-    color: #777799;
+.twitch {
+    background: linear-gradient(135deg, #a855ff, #6418d8);
 }
+
+.tiktok {
+    background: #101014;
+    border-right: 3px solid #ff2455;
+    border-left: 3px solid #00f2ea;
+}
+
+.youtube {
+    background: linear-gradient(135deg, #ff263b, #c90024);
+}
+
 </style>
-</head>
 
-<body>
+<div class="socials">
 
-<header>
-    <img src="robmaster-avatar.png" class="avatar" alt="Robmaster Avatar">
+    <a class="social-button twitch"
+       href="https://www.twitch.tv/robmastergaming"
+       target="_blank">
+        <span class="icon">🟣</span>
+        <span class="info">
+            Twitch
+            <small>robmastergaming</small>
+        </span>
+    </a>
 
-    <div class="logo-title">
-        ⚡ ROBMASTER.NL ⚡
-    </div>
-</header>
+    <a class="social-button tiktok"
+       href="https://www.tiktok.com/@indodyl"
+       target="_blank">
+        <span class="icon">♪</span>
+        <span class="info">
+            TikTok
+            <small>@indodyl</small>
+        </span>
+    </a>
 
-<main>
+    <a class="social-button youtube"
+       href="https://www.youtube.com/@Robmaster_YT"
+       target="_blank">
+        <span class="icon">▶</span>
+        <span class="info">
+            YouTube
+            <small>@Robmaster_YT</small>
+        </span>
+    </a>
 
-    <h1>Welkom bij Robmaster!</h1>
+</div>
 
-    <p class="welcome">
-        Yo! Welkom op mijn officiële website! 🎮<br>
-        Check mijn socials en join de community!
-    </p>
-
-    <div class="socials">
-
-        <a class="social twitch"
-           href="https://www.twitch.tv/robmastergaming"
-           target="_blank">
-            🟣 Twitch
-            <span>RobmasterGaming</span>
-        </a>
-
-        <a class="social youtube"
-           href="https://www.youtube.com/@Robmaster_YT"
-           target="_blank">
-            🔴 YouTube
-            <span>@Robmaster_YT</span>
-        </a>
-
-        <a class="social discord"
-           href="https://discord.gg/hnGFYj3c"
-           target="_blank">
-            💙 Discord
-            <span>Join mijn server!</span>
-        </a>
-
-    </div>
-
-</main>
-
-<footer>
-    © 2026 Robmaster.nl ⚡
-</footer>
-
-</body>
-</html>
 
 
 
