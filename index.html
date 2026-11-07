@@ -4,94 +4,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robmaster.nl</title>
+<title>Robmaster.nl ⚡</title>
 
 <style>
-body {
-  background: #080817;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  margin: 0;
-}
-header {
-  background: #11112b;
-  padding: 25px;
-  color: #00eaff;
-  font-size: 30px;
-  font-weight: bold;
-}
-h1 {
-  color: #00eaff;
-  font-size: 45px;
-  text-shadow: 0 0 20px #00eaff;
-}
-.card {
-  background: #15152e;
-  border: 1px solid #7c3cff;
-  border-radius: 15px;
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 350px;
-}
-button {
-  background: #7c3cff;
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-a {
-  color: #00eaff;
-  text-decoration: none;
-  font-size: 20px;
-}
-</style>
-.logo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  border-radius: 20px;
-  filter: drop-shadow(0 0 15px #00eaff);
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    background: #080817;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background: #111129;
+    padding: 35px 15px 25px;
+}
+
+.avatar {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 0;
+}
+
+.logo-title {
+    color: #00eaff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 12px;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+main {
+    padding: 25px 15px;
+}
+
+h1 {
+    color: #00eaff;
+    text-shadow: 0 0 15px #00eaff;
+    font-size: 42px;
+}
+
+.welcome {
+    font-size: 18px;
+    color: #ccccdd;
+    margin-bottom: 35px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social {
+    width: 260px;
+    padding: 22px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.social:hover {
+    transform: scale(1.05);
+}
+
+.twitch {
+    background: linear-gradient(135deg, #9146ff, #5b16c9);
+}
+
+.youtube {
+    background: linear-gradient(135deg, #ff2438, #c90024);
+}
+
+.discord {
+    background: linear-gradient(135deg, #5865f2, #303bb5);
+}
+
+.social span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    color: #777799;
+}
+</style>
 </head>
 
 <body>
 
-
 <header>
-  <img src="Logo RM.png" class="logo">
-  <div>⚡ ROBMASTER.NL ⚡</div>
+    <img src="robmaster-avatar.png" class="avatar" alt="Robmaster Avatar">
+
+    <div class="logo-title">
+        ⚡ ROBMASTER.NL ⚡
+    </div>
 </header>
 
+<main>
 
-<h1>Welkom bij Robmaster!</h1>
+    <h1>Welkom bij Robmaster!</h1>
 
-</div>
+    <p class="welcome">
+        Yo! Welkom op mijn officiële website! 🎮<br>
+        Check mijn socials en join de community!
+    </p>
 
+    <div class="socials">
 
+        <a class="social twitch"
+           href="https://www.twitch.tv/robmastergaming"
+           target="_blank">
+            🟣 Twitch
+            <span>RobmasterGaming</span>
+        </a>
 
+        <a class="social youtube"
+           href="https://www.youtube.com/@Robmaster_YT"
+           target="_blank">
+            🔴 YouTube
+            <span>@Robmaster_YT</span>
+        </a>
 
-<div class="card">
-  <h2>🌐 Mijn socials</h2>
-  <p>Volg Robmaster overal!</p>
+        <a class="social discord"
+           href="https://discord.gg/hnGFYj3c"
+           target="_blank">
+            💙 Discord
+            <span>Join mijn server!</span>
+        </a>
 
-  <p><a href="https://www.youtube.com/@Robmaster_YT" target="_blank">▶️ YouTube</a></p>
+    </div>
 
-  <p><a href="https://www.twitch.tv/robmastergaming" target="_blank">🎮 Twitch</a></p>
+</main>
 
-  <p><a href="https://discord.gg/UYBxwYhr4" target="_blank">💬 Discord</a></p>
-</div>
-
-    </a>
-  </p>
-</div>
-
-
-</body>
+<footer>
+    © 2026 Robmaster.nl ⚡
+</footer>
 
 </body>
 </html>
+
+
 
